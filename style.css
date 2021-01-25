@@ -1,9 +1,7 @@
-. {
-   
-}
+
 
 h1 {
-    font-size: 6rem;
+    font-size: 8rem;
     color: #343434;
     font-family: 'Zilla Slab', serif;
     text-align: center;
@@ -11,9 +9,101 @@ h1 {
 
 
 body {
-    background-color: #bf4e30;
+    background-color: #aa4465;
+        margin: 0;
+          padding: 0;
+    
 }
 
-.memorypanel  div {
-    background-image: "../GAME/assets/adrian-korte-5gn2soeAc40-unsplash.jpg";
+.pageTitle {
+display: flex;
+align-items: center;
+justify-content: center;
 }
+
+.menu {
+    display: flex;
+    justify-content:space-around;
+    font-family: 'Zilla Slab', serif;
+    color: #343434;
+    font-size: 1.5rem;
+}
+.worldMusicIcon {
+    height: 100px;
+margin: 10px 0px 0px 30px;
+}
+
+.game-board {
+    width: 690px;
+    padding: 40px 70px 60px 70px;
+    border: 5px solid #ffd23f;
+    border-radius: 100px 100px;
+    background-color:#ffd23f;
+    box-shadow: 5px 10px #343434;
+    position: relative;
+    right: 80px;
+    top: 100px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.game-section img {
+    height: 100px;
+    margin: 15px;
+    
+}
+
+
+.game-section {
+    background-image: url("../assets/adrian-korte-5gn2soeAc40-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 15px;
+    height: 900px;
+    width: 1500px;
+    margin: 50px auto 50px auto; 
+} 
+
+.note-card {
+    border:2px solid greenyellow;
+    position:relative;
+}
+
+.note-card:hover {
+    transform: scale(1.15);
+}
+
+.note-card:active {
+    transform: scale(1);
+}
+
+
+.note-black, .note-green {
+    border:2px solid aquamarine;
+}
+
+.note-black {
+    position: absolute;
+}
+
+.note-green {
+    position: relative;
+}
+
+
+/*.note-black {
+    height: 110px;
+    margin-top: 40px;
+    margin-right: 20px;
+}
+
+.note-black:hover {
+    height: 120px;
+    margin-top: 20px;
+    margin-right: 10px;
+}
+*/
+
+
