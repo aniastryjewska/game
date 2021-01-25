@@ -1,0 +1,19 @@
+. {
+   
+}
+
+h1 {
+    font-size: 6rem;
+    color: #343434;
+    font-family: 'Zilla Slab', serif;
+    text-align: center;
+}
+
+
+body {
+    background-color: #bf4e30;
+}
+
+.memorypanel  div {
+    background-image: "../GAME/assets/adrian-korte-5gn2soeAc40-unsplash.jpg";
+}
