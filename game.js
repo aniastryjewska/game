@@ -2,9 +2,10 @@
 
 function changeNoteColor(){
     console.log("I was clicked");
-    console.log(this);
+    console.log(this.children);
 
-    this.classList.toggle('clicked');
+    let Children = this.children;
+    Children[1].classList.toggle('clicked');
 }
 
 window.addEventListener('load', () => {

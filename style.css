@@ -15,23 +15,38 @@ body {
     
 }
 
+.worldMusicIcon {
+    height: 120px;
+margin: 10px 0px 0px 30px;
+}
+
 .pageTitle {
 display: flex;
 align-items: center;
 justify-content: center;
 }
 
+
+
+h2 {
+    color: #aa4465;
+    font-size: 2rem;
+    background-color: #ffd23f;
+    padding: 15px 20px 15px 20px;
+    border-radius: 10px;
+    box-shadow: 5px 5px #343434;
+}
+
+
 .menu {
     display: flex;
     justify-content:space-around;
     font-family: 'Zilla Slab', serif;
-    color: #343434;
-    font-size: 1.5rem;
+    
+    margin-top: 0;
 }
-.worldMusicIcon {
-    height: 100px;
-margin: 10px 0px 0px 30px;
-}
+
+
 
 .game-board {
     width: 690px;
@@ -67,12 +82,12 @@ margin: 10px 0px 0px 30px;
 } 
 
 .note-card {
-    border:2px solid greenyellow;
     position:relative;
 }
 
 .note-card:hover {
     transform: scale(1.15);
+    opacity: 0.75;
 }
 
 .note-card:active {
@@ -80,18 +95,17 @@ margin: 10px 0px 0px 30px;
 }
 
 
-.note-black, .note-green {
-    border:2px solid aquamarine;
-}
-
 .note-black {
-    position: absolute;
-}
-
-.note-green {
     position: relative;
 }
 
+.note-green {
+    position: absolute;
+}
+
+.clicked {
+    visibility: hidden;
+}
 
 /*.note-black {
     height: 110px;
