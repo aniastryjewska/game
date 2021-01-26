@@ -42,7 +42,7 @@ function startGame() {
 
 function checkIfMatched() {setTimeout(function() {
 if (ArrayToCheckIfCardsMatch.length ===2){
-    if (ArrayToCheckIfCardsMatch[0].innerHTML === ArrayToCheckIfCardsMatch[1].innerHTML) {
+    if ((ArrayToCheckIfCardsMatch[0].innerHTML === ArrayToCheckIfCardsMatch[1].innerHTML) &&(ArrayToCheckIfCardsMatch[0].id !== ArrayToCheckIfCardsMatch[1].id)) {
         console.log("They match!!")
        // console.log(ArrayToCheckIfCardsMatch[0].parentNode) -> works!!! <3
         ArrayToCheckIfCardsMatch[0].parentNode.classList.add("pair-matched")
@@ -56,6 +56,10 @@ if (ArrayToCheckIfCardsMatch.length ===2){
        // console.log(ArrayToCheckIfCardsMatch[0].previousSibling.previousSibling)
        ArrayToCheckIfCardsMatch[0].previousSibling.previousSibling.classList.remove("clicked")
        ArrayToCheckIfCardsMatch[1].previousSibling.previousSibling.classList.remove("clicked")
+       if (score>=8) {
+           score = score-1
+           document.querySelector(".score").innerHTML = `Score: ${score}`
+       }
     } 
     ArrayToCheckIfCardsMatch = []}}, 2500)}
 
@@ -77,20 +81,15 @@ function changeNoteColorAndPlaySound(){
     console.log(ArrayToCheckIfCardsMatch)
     checkIfMatched();
     
-    //document.getElementById('audio_play').play()
-   // audio2.play();
+    
 }
 
 window.addEventListener('load', () => {
     startGame()
      
 for (let card of noteCards) {
-    console.log(card.children[1])
-   if (card.children[1].classList.contains("clicked")){
-       console.log("already clicked!")
-   } else {
-    card.addEventListener('click', changeNoteColorAndPlaySound)
-  }
-}
+   
+    card.addEventListener('click', changeNoteColorAndPlaySound)}
+  
 document.querySelector(".restart-button").addEventListener('click', restartGame)
 })

@@ -49,15 +49,15 @@ h2 {
     display: flex;
     justify-content:space-around;
     font-family: 'Zilla Slab', serif;
-    
     margin-top: 0;
 }
 
 
 
 .game-board {
-    width: 690px;
-    padding: 40px 70px 60px 70px;
+    width: 530px;
+    height: 550px;
+    padding: 50px 90px ;
     border: 5px solid #ffd23f;
     border-radius: 100px 100px;
     background-color:#ffd23f;
@@ -70,9 +70,43 @@ h2 {
     flex-wrap: wrap;
 }
 
-.game-section img {
+.info-card {
+    width: 800px;
+    height: 700px;
+    background-color:#343434;
+    border-radius: 15px;
+    position: relative;
+    left: 300px;
+    top: 70px;
+    border: 5px dotted bisque;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.info-card img {
+ height: 400px;
+}
+
+.match-message {
+    color:beige;
+    font-family: 'Zilla Slab', serif;
+    text-align: center;
+    font-size: 3.5rem;
+}
+
+.info-message {
+    color:beige;
+    font-family: 'Zilla Slab', serif;
+    text-align: center;
+    font-size: 2.5rem;
+    
+}
+
+
+.note-green, .note-black {
     height: 100px;
-    margin: 15px;
+   /* margin: 15px;*/
     
 }
 
@@ -86,10 +120,13 @@ h2 {
     height: 900px;
     width: 1500px;
     margin: 50px auto 50px auto; 
+    display: flex;
+
 } 
 
 .note-card {
     position:relative;
+    /*border: 2px solid greenyellow;*/
 }
 
 .note-card:hover {
@@ -119,18 +156,5 @@ h2 {
 .clicked {
     visibility: hidden;
 }
-
-/*.note-black {
-    height: 110px;
-    margin-top: 40px;
-    margin-right: 20px;
-}
-
-.note-black:hover {
-    height: 120px;
-    margin-top: 20px;
-    margin-right: 10px;
-}
-*/
 
 
