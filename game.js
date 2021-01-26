@@ -37,7 +37,7 @@ function startGame() {
  gameBoard.appendChild(newArrayOfShuffledCards[i]);
         }
         score = 0
-    document.querySelector(".score").innerHTML = `Score: ${score}`
+    document.querySelector(".score").innerHTML = `🏆 Score: ${score}`
     }
 
 function checkIfMatched() {setTimeout(function() {
@@ -58,14 +58,14 @@ if (ArrayToCheckIfCardsMatch.length ===2){
        ArrayToCheckIfCardsMatch[1].previousSibling.previousSibling.classList.remove("clicked")
        if (score>=8) {
            score = score-1
-           document.querySelector(".score").innerHTML = `Score: ${score}`
+           document.querySelector(".score").innerHTML = `🏆 Score: ${score}`
        }
     } 
     ArrayToCheckIfCardsMatch = []}}, 2500)}
 
 function calculateScore() {
       score = score +4
-document.querySelector(".score").innerHTML = `Score: ${score}`
+document.querySelector(".score").innerHTML = `🏆 Score: ${score}`
 }
 
 function changeNoteColorAndPlaySound(){

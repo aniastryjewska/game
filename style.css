@@ -1,3 +1,26 @@
+.memory-panel {
+
+    background-image: url("../assets/dominik-vanyi-5Fxuo7x-eyg-unsplash.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: 'Zilla Slab', serif;
+    color:ivory;
+    font-size: 3rem;
+    text-align: center;
+    height: 1350px;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.memory-panel p {
+    
+    width: 800px;
+    padding: 50px;
+    border-radius: 30px;
+}
 
 
 h1 {
@@ -24,6 +47,8 @@ margin: 10px 0px 0px 30px;
 display: flex;
 align-items: center;
 justify-content: center;
+height: 200px;
+
 }
 
 .restart-button:hover {
@@ -37,9 +62,18 @@ justify-content: center;
 
 h2 {
     color: #aa4465;
-    font-size: 2rem;
+    font-size: 3rem;
     background-color: #ffd23f;
     padding: 15px 20px 15px 20px;
+    border-radius: 10px;
+    box-shadow: 5px 5px #343434;
+}
+
+h3 {
+    color: #aa4465;
+    font-size: 4rem;
+    background-color: #ffd23f;
+    padding: 25px 30px;
     border-radius: 10px;
     box-shadow: 5px 5px #343434;
 }
@@ -47,11 +81,10 @@ h2 {
 
 .menu {
     display: flex;
-    justify-content:space-around;
+    justify-content:space-evenly;
     font-family: 'Zilla Slab', serif;
     margin-top: 0;
 }
-
 
 
 .game-board {
@@ -72,20 +105,21 @@ h2 {
 
 .info-card {
     width: 800px;
-    height: 700px;
+    height: 1000px;
     background-color:#343434;
     border-radius: 15px;
     position: relative;
-    left: 300px;
-    top: 70px;
+    left: 100px;
+    bottom: 50px;
     border: 5px dotted bisque;
     display:flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-evenly;
 }
 
 .info-card img {
- height: 400px;
+ height: 550px;
 }
 
 .match-message {
@@ -109,7 +143,6 @@ h2 {
    /* margin: 15px;*/
     
 }
-
 
 .game-section {
     background-image: url("../assets/georg-arthur-pflueger-54jz7ax_jcg-unsplash.jpg");
