@@ -26,7 +26,14 @@ align-items: center;
 justify-content: center;
 }
 
-
+.restart-button:hover {
+    box-shadow: 7px 7px #343434;
+    transform: scale(1.1);
+}
+.restart-button:active {
+    box-shadow: 2px 2px #343434;
+    transform: scale(0.95);
+}
 
 h2 {
     color: #aa4465;
@@ -56,7 +63,7 @@ h2 {
     background-color:#ffd23f;
     box-shadow: 5px 10px #343434;
     position: relative;
-    right: 80px;
+    right: 180px;
     top: 100px;
     display: flex;
     flex-direction: row;
@@ -71,7 +78,7 @@ h2 {
 
 
 .game-section {
-    background-image: url("../assets/adrian-korte-5gn2soeAc40-unsplash.jpg");
+    background-image: url("../assets/georg-arthur-pflueger-54jz7ax_jcg-unsplash.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;

@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
   </head>
   <body>
+
     <script src="game.js"></script>
 
   <section class = "pageTitle">
@@ -22,113 +23,153 @@
 
   <h2>Score:</h2>
   <h2>Time: </h2>
-  <h2>Restart</h2>
+  <h2 class = "restart-button">Restart</h2>
   
 
 </section>
 
 <section class = "game-section">
   <div class ="game-board">
+    <div class = "note-card">  
+      <img class="note-green" src="../assets/note-pink.png" alt="Note icon" />
+      <img class="note-black" src="../assets/note.svg" alt="Note icon"/>
+      <audio id="audio_play">
+       <source src="../assets/comedy_bubble_pop_002.mp3" type="audio/mpeg" />
+      </audio>
+    </div>
     <div class = "note-card">
-       
+      <img class="note-green" src="../assets/note-pink.png" alt="Note icon" />
+      <img class="note-black" src="../assets/note.svg" alt="Note icon" />
+      <audio id="audio_play">
+        <source src="../assets/comedy_bubble_pop_001.mp3" type="audio/mpeg" />
+      </audio>
+    </div>
+    <div class = "note-card">
+      <img class="note-green" src="../assets/note-pink.png" alt="Note icon" />
+      <img class="note-black" src="../assets/note.svg" alt="Note icon" />
+      <audio id="audio_play">
+        <source src="../assets/charango.mp3" type="audio/mpeg" />
+      </audio>
+    </div>
+    <div class = "note-card">
        <img class="note-green" src="../assets/note-pink.png" alt="Note icon" />
-    <img class="note-black" src="../assets/note.svg" alt="Note icon" />
+       <img class="note-black" src="../assets/note.svg" alt="Note icon" />
+       <audio id="audio_play">
+        <source src="../assets/comedy_bubble_pop_002.mp3" type="audio/mpeg" />
+       </audio>
+    </div> 
+    <div class = "note-card">
+       <img class="note-green" src="../assets/note-pink.png" alt="Note icon" />
+       <img class="note-black" src="../assets/note.svg" alt="Note icon" />
+       <audio id="audio_play">
+        <source src="../assets/comedy_bubble_pop_001.mp3" type="audio/mpeg" />
+      </audio>
       </div>
     <div class = "note-card">
-       
        <img class="note-green" src="../assets/note-pink.png" alt="Note icon" />
-    <img class="note-black" src="../assets/note.svg" alt="Note icon" />
+       <img class="note-black" src="../assets/note.svg" alt="Note icon" />
+       <audio id="audio_play">
+        <source src="../assets/charango.mp3" type="audio/mpeg" />
+      </audio>
+    </div>
+    <div class = "note-card">
+       <img class="note-green" src="../assets/note-pink.png" alt="Note icon" />
+       <img class="note-black" src="../assets/note.svg" alt="Note icon" />
+       <audio id="audio_play">
+        <source src="../assets/magic.mp3" type="audio/mpeg" />
+       </audio>
+    </div>
+    <div class = "note-card">
+       <img class="note-green" src="../assets/note-pink.png" alt="Note icon" />
+       <img class="note-black" src="../assets/note.svg" alt="Note icon" />
+       <audio id="audio_play">
+        <source src="../assets/magic.mp3" type="audio/mpeg" />
+       </audio>
+    </div>
+    <div class = "note-card">
+       <img class="note-green" src="../assets/note-pink.png" alt="Note icon" />
+       <img class="note-black" src="../assets/note.svg" alt="Note icon" />
+       <audio id="audio_play">
+        <source src="../assets/fantasy.mp3" type="audio/mpeg" />
+       </audio>
+    </div>
+    <div class = "note-card">   
+       <img class="note-green" src="../assets/note-pink.png" alt="Note icon" />
+       <img class="note-black" src="../assets/note.svg" alt="Note icon" />
+       <audio id="audio_play">
+        <source src="../assets/fantasy.mp3" type="audio/mpeg" />
+       </audio>
+    </div>
+    <div class = "note-card">
+       <img class="note-green" src="../assets/note-pink.png" alt="Note icon" />
+       <img class="note-black" src="../assets/note.svg" alt="Note icon" />
+       <audio id="audio_play">
+        <source src="../assets/notification.mp3" type="audio/mpeg" />
+       </audio>
+    </div>
+    <div class = "note-card">
+       <img class="note-green" src="../assets/note-pink.png" alt="Note icon" />
+       <img class="note-black" src="../assets/note.svg" alt="Note icon" />
+       <audio id="audio_play">
+        <source src="../assets/notification.mp3" type="audio/mpeg" />
+       </audio>
+    </div>
+    <div class = "note-card">
+       <img class="note-green" src="../assets/note-pink.png" alt="Note icon" />
+       <img class="note-black" src="../assets/note.svg" alt="Note icon" />
+       <audio id="audio_play">
+        <source src="../assets/zapsplat_cartoon_new.mp3" type="audio/mpeg" />
+       </audio>
+    </div>
+    <div class = "note-card">
+        <img class="note-green" src="../assets/note-pink.png" alt="Note icon" />
+        <img class="note-black" src="../assets/note.svg" alt="Note icon" />
+        <audio id="audio_play">
+          <source src="../assets/zapsplat_cartoon_new.mp3" type="audio/mpeg" />
+        </audio>
+    </div>
+    <div class = "note-card">  
+       <img class="note-green" src="../assets/note-pink.png" alt="Note icon" />
+       <img class="note-black" src="../assets/note.svg" alt="Note icon" />
+       <audio id="audio_play">
+        <source src="../assets/crazy_bonkers_mouse.mp3" type="audio/mpeg" />
+       </audio>
+    </div>
+    <div class = "note-card">
+       <img class="note-green" src="../assets/note-pink.png" alt="Note icon" />
+       <img class="note-black" src="../assets/note.svg" alt="Note icon" />
+       <audio id="audio_play">
+        <source src="../assets/crazy_bonkers_mouse.mp3" type="audio/mpeg" />
+       </audio>
+    </div>
+    <div class = "note-card">  
+       <img class="note-green" src="../assets/note-pink.png" alt="Note icon" />
+       <img class="note-black" src="../assets/note.svg" alt="Note icon" />
+       <audio id="audio_play">
+        <source src="../assets/woodpecker.mp3" type="audio/mpeg" />
+       </audio>
+    </div>
+    <div class = "note-card">
+       <img class="note-green" src="../assets/note-pink.png" alt="Note icon" />
+       <img class="note-black" src="../assets/note.svg" alt="Note icon" />
+       <audio id="audio_play">
+        <source src="../assets/woodpecker.mp3" type="audio/mpeg" />
+       </audio>
+    </div>
+    <div class = "note-card">
+       <img class="note-green" src="../assets/note-pink.png" alt="Note icon" />
+       <img class="note-black" src="../assets/note.svg" alt="Note icon" />
+       <audio id="audio_play">
+        <source src="../assets/bells_buddhist.mp3" type="audio/mpeg" />
+       </audio>
       </div>
     <div class = "note-card">
-       
        <img class="note-green" src="../assets/note-pink.png" alt="Note icon" />
-    <img class="note-black" src="../assets/note.svg" alt="Note icon" />
-      </div>
-    <div class = "note-card">
-       
-       <img class="note-green" src="../assets/note-pink.png" alt="Note icon" />
-    <img class="note-black" src="../assets/note.svg" alt="Note icon" />
-      </div> 
-    <div class = "note-card">
-       
-       <img class="note-green" src="../assets/note-pink.png" alt="Note icon" />
-    <img class="note-black" src="../assets/note.svg" alt="Note icon" />
-      </div>
-    <div class = "note-card">
-       
-       <img class="note-green" src="../assets/note-pink.png" alt="Note icon" />
-    <img class="note-black" src="../assets/note.svg" alt="Note icon" />
-      </div>
-    <div class = "note-card">
-       
-       <img class="note-green" src="../assets/note-pink.png" alt="Note icon" />
-    <img class="note-black" src="../assets/note.svg" alt="Note icon" />
-      </div>
-    <div class = "note-card">
-       
-       <img class="note-green" src="../assets/note-pink.png" alt="Note icon" />
-    <img class="note-black" src="../assets/note.svg" alt="Note icon" />
-      </div>
-    <div class = "note-card">
-       
-       <img class="note-green" src="../assets/note-pink.png" alt="Note icon" />
-    <img class="note-black" src="../assets/note.svg" alt="Note icon" />
-      </div>
-    <div class = "note-card">
-       
-       <img class="note-green" src="../assets/note-pink.png" alt="Note icon" />
-    <img class="note-black" src="../assets/note.svg" alt="Note icon" />
-      </div>
-    <div class = "note-card">
-       
-       <img class="note-green" src="../assets/note-pink.png" alt="Note icon" />
-    <img class="note-black" src="../assets/note.svg" alt="Note icon" />
-      </div>
-    <div class = "note-card">
-       
-       <img class="note-green" src="../assets/note-pink.png" alt="Note icon" />
-    <img class="note-black" src="../assets/note.svg" alt="Note icon" />
-      </div>
-    <div class = "note-card">
-       
-       <img class="note-green" src="../assets/note-pink.png" alt="Note icon" />
-    <img class="note-black" src="../assets/note.svg" alt="Note icon" />
-      </div>
-    <div class = "note-card">
-       
-       <img class="note-green" src="../assets/note-pink.png" alt="Note icon" />
-    <img class="note-black" src="../assets/note.svg" alt="Note icon" />
-      </div>
-    <div class = "note-card">
-       
-       <img class="note-green" src="../assets/note-pink.png" alt="Note icon" />
-    <img class="note-black" src="../assets/note.svg" alt="Note icon" />
-      </div>
-    <div class = "note-card">
-       
-       <img class="note-green" src="../assets/note-pink.png" alt="Note icon" />
-    <img class="note-black" src="../assets/note.svg" alt="Note icon" />
-      </div>
-    <div class = "note-card">
-       
-       <img class="note-green" src="../assets/note-pink.png" alt="Note icon" />
-    <img class="note-black" src="../assets/note.svg" alt="Note icon" />
-      </div>
-    <div class = "note-card">
-       
-       <img class="note-green" src="../assets/note-pink.png" alt="Note icon" />
-    <img class="note-black" src="../assets/note.svg" alt="Note icon" />
-      </div>
-    <div class = "note-card">
-       
-       <img class="note-green" src="../assets/note-pink.png" alt="Note icon" />
-    <img class="note-black" src="../assets/note.svg" alt="Note icon" />
-      </div>
-    <div class = "note-card">
-       
-       <img class="note-green" src="../assets/note-pink.png" alt="Note icon" />
-    <img class="note-black" src="../assets/note.svg" alt="Note icon" />
-      </div>
+       <img class="note-black" src="../assets/note.svg" alt="Note icon" />
+       <audio id="audio_play">
+        <source src="../assets/bells_buddhist.mp3" type="audio/mpeg" />
+       </audio>
+    </div>
     </div>
 </section>
 
