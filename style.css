@@ -101,6 +101,12 @@ h2 {
     transform: scale(1);
 }
 
+.pair-matched {
+    opacity: 0;
+}
+.pair-matched:hover {
+    opacity: 0;
+}
 
 .note-black {
     position: relative;

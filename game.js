@@ -3,6 +3,7 @@
 
 let noteCards = document.getElementsByClassName("note-card");
 let ArrayToCheckIfCardsMatch = []
+let score = 0
 
 function shuffleCards(){
     
@@ -14,6 +15,19 @@ function shuffleCards(){
   }} return shuffledCards
 }
 
+function restartGame() {
+
+for (let card of noteCards) {
+    card.classList.remove("pair-matched")
+    //console.log(card.childNodes)
+    card.childNodes[3].classList.remove("clicked")
+    }
+    
+    startGame()
+}
+
+
+
 function startGame() {
     let gameBoard = document.querySelector(".game-board");
     let newArrayOfShuffledCards = shuffleCards();
@@ -22,18 +36,20 @@ function startGame() {
         //console.log(newArrayOfShuffledCards[i])
  gameBoard.appendChild(newArrayOfShuffledCards[i]);
         }
+        score = 0
+    document.querySelector(".score").innerHTML = `Score: ${score}`
     }
 
-function checkIfMatched() {
-    // console.log("oh shit") -> works
-    // console.log(this) -> doesn't work, logs the whole window
+function checkIfMatched() {setTimeout(function() {
 if (ArrayToCheckIfCardsMatch.length ===2){
-    if (ArrayToCheckIfCardsMatch[0] === ArrayToCheckIfCardsMatch[1]) {
+    if (ArrayToCheckIfCardsMatch[0].innerHTML === ArrayToCheckIfCardsMatch[1].innerHTML) {
         console.log("They match!!")
        // console.log(ArrayToCheckIfCardsMatch[0].parentNode) -> works!!! <3
         ArrayToCheckIfCardsMatch[0].parentNode.classList.add("pair-matched")
         ArrayToCheckIfCardsMatch[1].parentNode.classList.add("pair-matched")
-        
+
+        calculateScore()
+
     } else {
         console.log("They don't match.")
         console.log(ArrayToCheckIfCardsMatch[0])
@@ -41,11 +57,12 @@ if (ArrayToCheckIfCardsMatch.length ===2){
        ArrayToCheckIfCardsMatch[0].previousSibling.previousSibling.classList.remove("clicked")
        ArrayToCheckIfCardsMatch[1].previousSibling.previousSibling.classList.remove("clicked")
     } 
+    ArrayToCheckIfCardsMatch = []}}, 2500)}
 
-    ArrayToCheckIfCardsMatch = []}
+function calculateScore() {
+      score = score +4
+document.querySelector(".score").innerHTML = `Score: ${score}`
 }
-
-setTimeout(checkIfMatched, 2000);
 
 function changeNoteColorAndPlaySound(){
     //console.log("I was clicked");
@@ -66,8 +83,14 @@ function changeNoteColorAndPlaySound(){
 
 window.addEventListener('load', () => {
     startGame()
-let noteCards = document.getElementsByClassName("note-card");
+     
 for (let card of noteCards) {
+    console.log(card.children[1])
+   if (card.children[1].classList.contains("clicked")){
+       console.log("already clicked!")
+   } else {
     card.addEventListener('click', changeNoteColorAndPlaySound)
+  }
 }
+document.querySelector(".restart-button").addEventListener('click', restartGame)
 })
