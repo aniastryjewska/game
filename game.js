@@ -26,8 +26,6 @@ for (let card of noteCards) {
     startGame()
 }
 
-
-
 function startGame() {
     let gameBoard = document.querySelector(".game-board");
     let newArrayOfShuffledCards = shuffleCards();
@@ -49,6 +47,9 @@ if (ArrayToCheckIfCardsMatch.length ===2){
         ArrayToCheckIfCardsMatch[1].parentNode.classList.add("pair-matched")
 
         calculateScore()
+        appendInfoCard()
+
+
 
     } else {
         console.log("They don't match.")
@@ -88,8 +89,9 @@ window.addEventListener('load', () => {
     startGame()
      
 for (let card of noteCards) {
-   
     card.addEventListener('click', changeNoteColorAndPlaySound)}
   
 document.querySelector(".restart-button").addEventListener('click', restartGame)
 })
+
+function appendInfoCard() {}
