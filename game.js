@@ -33,9 +33,8 @@ function startGame() {
     let gameBoard = document.querySelector(".game-board");
     let newArrayOfShuffledCards = shuffleCards();
     for (let i = 0; i <newArrayOfShuffledCards.length; i++) {
-        //console.log(gameBoard)
-        //console.log(newArrayOfShuffledCards[i])
- gameBoard.appendChild(newArrayOfShuffledCards[i]);
+        
+    gameBoard.appendChild(newArrayOfShuffledCards[i]);
         }
         score = 0
     document.querySelector(".score").innerHTML = `🏆 Score: ${score}`
@@ -45,7 +44,7 @@ function checkIfMatched() {setTimeout(function() {
 if (ArrayToCheckIfCardsMatch.length ===2){
     if ((ArrayToCheckIfCardsMatch[0].innerHTML === ArrayToCheckIfCardsMatch[1].innerHTML) &&(ArrayToCheckIfCardsMatch[0].id !== ArrayToCheckIfCardsMatch[1].id)) {
         console.log("They match!!")
-       // console.log(ArrayToCheckIfCardsMatch[0].parentNode) -> works!!! <3
+       
        let infoCards = document.querySelectorAll(".info-card");
        for (let infoCard of infoCards) {
        infoCard.classList.add("hidden")}
@@ -92,16 +91,17 @@ if (ArrayToCheckIfCardsMatch.length ===2){
      } 
 
 
-        ArrayToCheckIfCardsMatch[0].parentNode.classList.add("pair-matched")
-        ArrayToCheckIfCardsMatch[1].parentNode.classList.add("pair-matched")
-
+        ArrayToCheckIfCardsMatch[0].parentNode.classList.add("pair-matched");
+        ArrayToCheckIfCardsMatch[1].parentNode.classList.add("pair-matched");
+        ArrayToCheckIfCardsMatch[0].previousSibling.previousSibling.classList.remove("clicked");
+        ArrayToCheckIfCardsMatch[1].previousSibling.previousSibling.classList.remove("clicked");
        
         increaseScore()
         
     } else {
         console.log("They don't match.")
         console.log(ArrayToCheckIfCardsMatch[0])
-       // console.log(ArrayToCheckIfCardsMatch[0].previousSibling.previousSibling)
+       
        ArrayToCheckIfCardsMatch[0].previousSibling.previousSibling.classList.remove("clicked")
        ArrayToCheckIfCardsMatch[1].previousSibling.previousSibling.classList.remove("clicked")
        decreaseScore()
@@ -139,8 +139,9 @@ function decreaseScore() {
 
 
 function changeNoteColorAndPlaySound(){
-    //console.log("I was clicked");
-    //console.log(this.children);
+
+    let clickedNotes = document.querySelectorAll(".clicked");
+    if (clickedNotes.length < 2) {
 
     let Children = this.children;
     Children[1].classList.add('clicked');
@@ -150,8 +151,8 @@ function changeNoteColorAndPlaySound(){
         ArrayToCheckIfCardsMatch.push(Children[2])}
     console.log(ArrayToCheckIfCardsMatch)
     checkIfMatched();
-    
-    
+   }
+     
 }
 
 window.addEventListener('load', () => {
@@ -163,4 +164,4 @@ for (let card of noteCards) {
 document.querySelector(".restart-button").addEventListener('click', restartGame)
 })
 
-function appendInfoCard() {}
+
