@@ -1,6 +1,6 @@
 .memory-panel {
 
-    background-image: url("../assets/dominik-vanyi-5Fxuo7x-eyg-unsplash.jpg");
+    /*background-image: url("../assets/dominik-vanyi-5Fxuo7x-eyg-unsplash.jpg");*/
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -69,13 +69,25 @@ h2 {
     box-shadow: 5px 5px #343434;
 }
 
-h3 {
+.play-button {
     color: #aa4465;
     font-size: 4rem;
     background-color: #ffd23f;
     padding: 25px 30px;
     border-radius: 10px;
     box-shadow: 5px 5px #343434;
+    text-decoration: none;
+}
+
+.play-button:hover {
+    color: #aa4465;
+    font-size: 4rem;
+    background-color: #ffd23f;
+    padding: 25px 30px;
+    border-radius: 10px;
+    text-decoration: none;
+    box-shadow: 7px 7px #343434;
+    transform: scale(1.1);
 }
 
 
