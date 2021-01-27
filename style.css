@@ -24,7 +24,7 @@
 
 
 h1 {
-    font-size: 8rem;
+    font-size: 5rem;
     color: #343434;
     font-family: 'Zilla Slab', serif;
     text-align: center;
@@ -39,7 +39,7 @@ body {
 }
 
 .worldMusicIcon {
-    height: 120px;
+    height: 100px;
 margin: 10px 0px 0px 30px;
 }
 
@@ -62,7 +62,7 @@ height: 200px;
 
 h2 {
     color: #aa4465;
-    font-size: 3rem;
+    font-size: 1.8rem;
     background-color: #ffd23f;
     padding: 15px 20px 15px 20px;
     border-radius: 10px;
@@ -100,58 +100,74 @@ h2 {
 
 
 .game-board {
-    width: 530px;
-    height: 550px;
-    padding: 50px 90px ;
+    width: 360px;
+    height: 370px;
+    padding: 40px;
     border: 5px solid #ffd23f;
     border-radius: 100px 100px;
     background-color:#ffd23f;
     box-shadow: 5px 10px #343434;
     position: relative;
-    right: 180px;
-    top: 100px;
+    right: 110px;
+    top: 120px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
 }
 
+.placeholder-info-card {
+    position:relative
+}
+
 .info-card {
-    width: 800px;
-    height: 1000px;
+    width: 400px;
+    height: 600px;
     background-color:#343434;
     border-radius: 15px;
-    position: relative;
+    position: absolute;
     left: 100px;
-    bottom: 50px;
-    border: 5px dotted bisque;
+    bottom: 30px;
+    border: 5px solid bisque;
     display:flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+    margin: 15px;
 }
 
 .info-card img {
- height: 550px;
+ height: 300px;
 }
 
 .match-message {
     color:beige;
     font-family: 'Zilla Slab', serif;
     text-align: center;
-    font-size: 3.5rem;
+    font-size: 2.5rem;
 }
 
 .info-message {
     color:beige;
     font-family: 'Zilla Slab', serif;
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 1.7rem;
     
 }
 
+.info-card a:link {
+    color: lightblue;
+    text-decoration: none;
+}
+
+.info-card a:hover {
+    color: bisque;
+}
+.info-card a:visited {
+    color: lightblue;
+}
 
 .note-green, .note-black {
-    height: 100px;
+    height: 70px;
    /* margin: 15px;*/
     
 }
@@ -162,8 +178,8 @@ h2 {
     background-position: center;
     background-size: cover;
     border-radius: 15px;
-    height: 900px;
-    width: 1500px;
+    height: 700px;
+    width: 1000px;
     margin: 50px auto 50px auto; 
     display: flex;
 
@@ -176,7 +192,7 @@ h2 {
 
 .note-card:hover {
     transform: scale(1.15);
-    opacity: 0.75;
+    opacity: 0.65;
 }
 
 .note-card:active {
@@ -202,7 +218,6 @@ h2 {
     visibility: hidden;
 }
 
-.info-card {
+.hidden {
     visibility: hidden;
 }
-

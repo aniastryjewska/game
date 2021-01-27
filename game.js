@@ -43,15 +43,56 @@ if (ArrayToCheckIfCardsMatch.length ===2){
     if ((ArrayToCheckIfCardsMatch[0].innerHTML === ArrayToCheckIfCardsMatch[1].innerHTML) &&(ArrayToCheckIfCardsMatch[0].id !== ArrayToCheckIfCardsMatch[1].id)) {
         console.log("They match!!")
        // console.log(ArrayToCheckIfCardsMatch[0].parentNode) -> works!!! <3
+       
+       if(ArrayToCheckIfCardsMatch[0].parentNode.id === "1") {
+        console.log("The Id is 1");
+        let card = document.getElementById("card1");
+         card.classList.remove("hidden")
+     } else if(ArrayToCheckIfCardsMatch[0].parentNode.id === "2") {
+        console.log("The Id is 2");
+        let card = document.getElementById("card2");
+         card.classList.remove("hidden")
+     } else if (ArrayToCheckIfCardsMatch[0].parentNode.id === "3"){
+        console.log("The Id is 3");
+        let card = document.getElementById("card3");
+         card.classList.remove("hidden")
+     } else if (ArrayToCheckIfCardsMatch[0].parentNode.id === "4"){
+        console.log("The Id is 4");
+        let card = document.getElementById("card4");
+         card.classList.remove("hidden")
+     } else if (ArrayToCheckIfCardsMatch[0].parentNode.id === "5"){
+        console.log("The Id is 5");
+        let card = document.getElementById("card5");
+         card.classList.remove("hidden")
+     } else if (ArrayToCheckIfCardsMatch[0].parentNode.id === "6"){
+        console.log("The Id is 6");
+        let card = document.getElementById("card6");
+         card.classList.remove("hidden")
+     } else if (ArrayToCheckIfCardsMatch[0].parentNode.id === "7"){
+        console.log("The Id is 7");
+        let card = document.getElementById("card7");
+         card.classList.remove("hidden")
+     } else if (ArrayToCheckIfCardsMatch[0].parentNode.id === "8"){
+        console.log("The Id is 8");
+        let card = document.getElementById("card8");
+         card.classList.remove("hidden")
+     } else if (ArrayToCheckIfCardsMatch[0].parentNode.id === "9"){
+        console.log("The Id is 9");
+        let card = document.getElementById("card9");
+         card.classList.remove("hidden")
+     } else if (ArrayToCheckIfCardsMatch[0].parentNode.id === "10"){
+        console.log("The Id is 10");
+        let card = document.getElementById("card10");
+         card.classList.remove("hidden")
+     } 
+
+
         ArrayToCheckIfCardsMatch[0].parentNode.classList.add("pair-matched")
         ArrayToCheckIfCardsMatch[1].parentNode.classList.add("pair-matched")
 
-        appendInfoCard()
+       
         increaseScore()
         
-
-
-
     } else {
         console.log("They don't match.")
         console.log(ArrayToCheckIfCardsMatch[0])
@@ -89,6 +130,8 @@ function decreaseScore() {
         restartGame()
   }
 }
+
+
 
 function changeNoteColorAndPlaySound(){
     //console.log("I was clicked");
