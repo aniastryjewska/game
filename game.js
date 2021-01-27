@@ -22,6 +22,9 @@ for (let card of noteCards) {
     //console.log(card.childNodes)
     card.childNodes[3].classList.remove("clicked")
     }
+let infoCards = document.querySelectorAll(".info-card");
+    for (let infoCard of infoCards) {
+    infoCard.classList.add("hidden")}
     
     startGame()
 }
@@ -43,9 +46,11 @@ if (ArrayToCheckIfCardsMatch.length ===2){
     if ((ArrayToCheckIfCardsMatch[0].innerHTML === ArrayToCheckIfCardsMatch[1].innerHTML) &&(ArrayToCheckIfCardsMatch[0].id !== ArrayToCheckIfCardsMatch[1].id)) {
         console.log("They match!!")
        // console.log(ArrayToCheckIfCardsMatch[0].parentNode) -> works!!! <3
-       
+       let infoCards = document.querySelectorAll(".info-card");
+       for (let infoCard of infoCards) {
+       infoCard.classList.add("hidden")}
+
        if(ArrayToCheckIfCardsMatch[0].parentNode.id === "1") {
-        console.log("The Id is 1");
         let card = document.getElementById("card1");
          card.classList.remove("hidden")
      } else if(ArrayToCheckIfCardsMatch[0].parentNode.id === "2") {
@@ -112,7 +117,7 @@ let matchedPairs = document.querySelectorAll(".pair-matched");
     console.log(matchedPairs)
 
     if ((score >= 16) || (matchedPairs.length >= 12)) {
-      alert("You win!");
+      alert("Congratulations! 🥳 You win!");
       restartGame()
 }
 }
@@ -126,7 +131,7 @@ function decreaseScore() {
     }
 
     if ((score <= 0) && (matchedPairs.length >= 2)) {
-        alert("You lose!");
+        alert("You lose 😣 Try again!");
         restartGame()
   }
 }
