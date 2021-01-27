@@ -11,230 +11,27 @@
     <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
   </head>
   <body>
+    
+</section>
 
-    <script src="game.js"></script>
-
-  <section class = "pageTitle">
-    <h1>World Music Memory</h1>
-    <img class="worldMusicIcon" src="./assets/guitar.png" alt="Icon" />
-  </section>
-
-<section class = "menu">
-
-  <h2 class ="score">🏆 Score:</h2>
- 
-  <h2 class = "restart-button">Restart 🔄 </h2>
+<section> 
   
+  <div class = "memory-panel">
+    <section class = "pageTitle">
+      <h1>World Music Memory</h1>
+      <img class="worldMusicIcon" src="./assets/guitar.png" alt="Icon" />
+    </section>
+<p>Discover world music while playing memory! <br>
+  Each match equals 4 points. 
+  Once you've collected at least 8 points, 
+  1 point will be deducted for each failed match. Collect 16 points to win. </p>
+
+  <a href= "game.html" class= "play-button">PLAY</a>
+ </div>
+
 
 </section>
 
-<section class = "game-section">
-  <div class ="game-board">
-    <div class = "note-card" id = "1">  
-      <img class="note-green" src="./assets/note-pink.png" alt="Note icon" />
-      <img class="note-black" src="./assets/note.svg" alt="Note icon"/>
-      <audio id="audio1">
-       <source src="./assets/Shantou opera.m4a" type="audio/mpeg" />
-      </audio>
-    </div>
-    <div class = "note-card" id = "1">
-      <img class="note-green" src="./assets/note-pink.png" alt="Note icon" />
-      <img class="note-black" src="./assets/note.svg" alt="Note icon" />
-      <audio id="audio2">
-       <source src="./assets/Shantou opera.m4a" type="audio/mpeg" />
-      </audio>
-    </div>
-    <div class = "note-card" id = "2">
-      <img class="note-green" src="./assets/note-pink.png" alt="Note icon" />
-      <img class="note-black" src="./assets/note.svg" alt="Note icon" />
-      <audio id="audio3">
-        <source src="./assets/charango.mp3" type="audio/mpeg" />
-      </audio>
-    </div>
-    <div class = "note-card" id = "3">
-       <img class="note-green" src="./assets/note-pink.png" alt="Note icon" />
-       <img class="note-black" src="./assets/note.svg" alt="Note icon" />
-       <audio id="audio4">
-        <source src="./assets/Santur.m4a" type="audio/mpeg" />
-       </audio>
-    </div> 
-    <div class = "note-card" id = "3">
-       <img class="note-green" src="./assets/note-pink.png" alt="Note icon" />
-       <img class="note-black" src="./assets/note.svg" alt="Note icon" />
-       <audio id="audio5">
-        <source src="./assets/Santur.m4a" type="audio/mpeg" />
-      </audio>
-      </div> 
-    <div class = "note-card" id = "2">
-       <img class="note-green" src="./assets/note-pink.png" alt="Note icon" />
-       <img class="note-black" src="./assets/note.svg" alt="Note icon" />
-       <audio id="audio6">
-        <source src="./assets/charango.mp3" type="audio/mpeg" />
-      </audio>
-    </div>
-    <div class = "note-card" id = "4">
-       <img class="note-green" src="./assets/note-pink.png" alt="Note icon" />
-       <img class="note-black" src="./assets/note.svg" alt="Note icon" />
-       <audio id="audio7">
-        <source src="./assets/Gamelan.m4a" type="audio/mpeg" />
-       </audio>
-    </div>
-    <div class = "note-card" id = "4">
-       <img class="note-green" src="./assets/note-pink.png" alt="Note icon" />
-       <img class="note-black" src="./assets/note.svg" alt="Note icon" />
-       <audio id="audio8">
-        <source src="./assets/Gamelan.m4a" type="audio/mpeg" />
-       </audio>
-    </div>
-    <div class = "note-card" id = "5">
-       <img class="note-green" src="./assets/note-pink.png" alt="Note icon" />
-       <img class="note-black" src="./assets/note.svg" alt="Note icon" />
-       <audio id="audio9">
-        <source src="./assets/Mbira.m4a" type="audio/mpeg" />
-       </audio>
-    </div>
-    <div class = "note-card" id = "5">   
-       <img class="note-green" src="./assets/note-pink.png" alt="Note icon" />
-       <img class="note-black" src="./assets/note.svg" alt="Note icon" />
-       <audio id="audio10">
-        <source src="./assets/Mbira.m4a" type="audio/mpeg" />
-       </audio>
-    </div>
-    <div class = "note-card" id = "6">
-       <img class="note-green" src="./assets/note-pink.png" alt="Note icon" />
-       <img class="note-black" src="./assets/note.svg" alt="Note icon" />
-       <audio id="audio11">
-        <source src="./assets/Kouxian.m4a" type="audio/mpeg" />
-       </audio>
-    </div>
-    <div class = "note-card" id = "6">
-       <img class="note-green" src="./assets/note-pink.png" alt="Note icon" />
-       <img class="note-black" src="./assets/note.svg" alt="Note icon" />
-       <audio id="audio12">
-        <source src="./assets/Kouxian.m4a" type="audio/mpeg" />
-       </audio>
-    </div>
-    <div class = "note-card" id = "7">
-       <img class="note-green" src="./assets/note-pink.png" alt="Note icon" />
-       <img class="note-black" src="./assets/note.svg" alt="Note icon" />
-       <audio id="audio13">
-         <source src="./assets/Spiew-bialy.m4a" type="audio/mpeg" />
-       </audio>
-    </div>
-    <div class = "note-card" id = "7">
-        <img class="note-green" src="./assets/note-pink.png" alt="Note icon" />
-        <img class="note-black" src="./assets/note.svg" alt="Note icon" />
-        <audio id="audio14">
-         <source src="./assets/Spiew-bialy.m4a" type="audio/mpeg" />
-        </audio>
-    </div>
-    <div class = "note-card" id = "8">  
-       <img class="note-green" src="./assets/note-pink.png" alt="Note icon" />
-       <img class="note-black" src="./assets/note.svg" alt="Note icon" />
-       <audio id="audio15">
-        <source src="./assets/Throat-singing.m4a" type="audio/mpeg" />
-       </audio>
-    </div>
-    <div class = "note-card" id = "8">
-       <img class="note-green" src="./assets/note-pink.png" alt="Note icon" />
-       <img class="note-black" src="./assets/note.svg" alt="Note icon" />
-       <audio id="audio16">
-        <source src="./assets/Throat-singing.m4a" type="audio/mpeg" />
-       </audio>
-    </div>
-    <div class = "note-card" id = "9">  
-       <img class="note-green" src="./assets/note-pink.png" alt="Note icon" />
-       <img class="note-black" src="./assets/note.svg" alt="Note icon" />
-       <audio id="audio17">
-        <source src="./assets/Nadaswaram.m4a" type="audio/mpeg" />
-       </audio>
-    </div>
-    <div class = "note-card" id = "9">
-       <img class="note-green" src="./assets/note-pink.png" alt="Note icon" />
-       <img class="note-black" src="./assets/note.svg" alt="Note icon" />
-       <audio id="audio18">
-        <source src="./assets/Nadaswaram.m4a" type="audio/mpeg" />
-       </audio>
-    </div>
-    <div class = "note-card" id = "10">
-       <img class="note-green" src="./assets/note-pink.png" alt="Note icon" />
-       <img class="note-black" src="./assets/note.svg" alt="Note icon" />
-       <audio id="audio19">
-        <source src="./assets/Kora.m4a" type="audio/mpeg" />
-       </audio>
-      </div>
-    <div class = "note-card" id = "10">
-       <img class="note-green" src="./assets/note-pink.png" alt="Note icon" />
-       <img class="note-black" src="./assets/note.svg" alt="Note icon" />
-       <audio id="audio20">
-        <source src="./assets/Kora.m4a" type="audio/mpeg" />
-       </audio>
-    </div>
-    </div>
-  
-  <span class = "placeholder-info-card">
-    <div class = "info-card hidden" id = "card2">
-      <p class = "match-message">It's a match! 🥁</p>
-      <img id = "charango" src ="../assets/charango_publicdomain.jpg" alt="musician image" />
-      <p class = "info-message">That's charango, a small lute <br> from the Andes!</p>
-  </div>
-  
-  <div class = "info-card hidden" id = "card1">
-      <p class = "match-message">You got it! 🥳</p>
-      <img id = "shantou" src ="../assets/Shantou-opera.jpg" alt="musician image" />
-      <p class = "info-message">That sounded like Chinese opera... <br> from Shantou in South China.</p>
-  </div>
-  <div class = "info-card hidden" id = "card3">
-    <p class = "match-message">You got it! 🥳</p>
-    <img id = "santur" src ="../assets/Ali_Bahrami-Fard_performing_in_Vahdat_HallCreativeCommons.jpg" alt="musician image" />
-    <p class = "info-message">That was Iranian santur music <br> played by <a href ="https://www.youtube.com/watch?v=95amB7kUu-k">Tomos Brangwyn</a>.</p>
-</div>
-
-<div class = "info-card hidden" id = "card4">
-    <p class = "match-message"> Yay! 🤩</p>
-    <img id = "gamelan" src ="../assets/Kraton_Jogja-GamelanCreativeCommons.jpg" alt="musician image" />
-    <p class = "info-message"> Gamelan - traditional  <br> <a href="https://www.youtube.com/watch?v=nGCSrC8RN6c">percussion ensemble</a> from Indonesia!</p>
-</div>
-
-<div class = "info-card hidden" id = "card5">
-    <p class = "match-message">🤩</p>
-    <img id = "mbira" src ="../assets/428px-Mbira_dzavadzimu_1CreativeCommons.jpg" alt="musician image" />
-    <p class = "info-message">Zimbabwean finger harp <br> called <a href= "https://www.youtube.com/watch?v=tKbfUEhjuH4">mbira</a>!</p>
-</div>
-
-<div class = "info-card hidden" id = "card6">
-    <p class = "match-message">You got a match! 🎹</p>
-    <img id = "kouxian" src ="../assets/Kouxian-publicdomain.jpg" alt="musician image" />
-    <p class = "info-message">Mouth harp by Nosu player <br> <a href="https://www.youtube.com/watch?v=cJkVW0vzwZg">Ashuo</a>, Southwest China.</p>
-</div>
-
-
-<div class = "info-card hidden" id = "card7">
-    <p class = "match-message">💪💪💪</p>
-    <img id = "spiew-bialy" src ="../assets/daria-rom-3R4aZjzyGPA-unsplash.jpg" alt="musician image" />
-    <p class = "info-message"><a href="https://www.youtube.com/watch?v=w55K5vJa9Po">White voice</a>, an Eastern European <br> singing style.</p>
-</div>
-
-<div class = "info-card hidden" id = "card8">
-    <p class = "match-message">It's a match! 🥁</p>
-    <img id = "throat-singing" src ="../assets/munkh-erdene-eenee-FlYAVZccZyM-unsplash.jpg" alt="musician image" />
-    <p class = "info-message">You discovered Mongolian throat singing by<a href="https://www.youtube.com/watch?v=gAua3u3DXfU"> Batzorig Vaanchig!</a></p>
-</div>
-
-<div class = "info-card hidden" id = "card9">
-    <p class = "match-message">Great! 🪕</p>
-    <img id = "nadaswaram" src ="../assets/Musicians_in_Bull_TempleCreativeCommons.jpg" alt="musician image" />
-    <p class = "info-message">Meet the <a href="https://www.youtube.com/watch?v=i__rdW7ckj0">nadaswaram</a>, <br> a South Indian wind instrument.</p>
-</div>
-
-<div class = "info-card hidden" id = "card10">
-    <p class = "match-message">Awesome! 🎷</p>
-    <img id = "kora" src ="../assets/Djélymady_1CreativeCommons.jpg" alt="musician image" />
-    <p class = "info-message">You just heard <br> West African kora<br> played by <a href="https://www.youtube.com/watch?v=WjdWVNRVO1I">Idrissa Coulibay</a>.</p>
-</div>
-</span>
-
-</section>
 
     
   </body>

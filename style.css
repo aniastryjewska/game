@@ -1,15 +1,17 @@
 .memory-panel {
 
-    /*background-image: url("./assets/dominik-vanyi-5Fxuo7x-eyg-unsplash.jpg");*/
+    background-image: url("./assets/dominik-vanyi-5Fxuo7x-eyg-unsplash.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     font-family: 'Zilla Slab', serif;
     color:ivory;
-    font-size: 3rem;
+    font-size: 1.5rem;
     text-align: center;
-    height: 1350px;
-    padding: 50px;
+    height: 750px;
+    padding: 20px;
+    margin: 50px 150px;
+    border-radius: 50px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -18,8 +20,12 @@
 .memory-panel p {
     
     width: 800px;
-    padding: 50px;
-    border-radius: 30px;
+    padding: 20px 40px;
+    border-radius: 20px;
+  text-align:justify;
+   background-color:rgba(170, 68, 101, 0.7) ;
+   position: relative;
+   top: 120px
 }
 
 
@@ -47,7 +53,7 @@ margin: 10px 0px 0px 30px;
 display: flex;
 align-items: center;
 justify-content: center;
-height: 200px;
+height: 150px;
 
 }
 
@@ -71,9 +77,9 @@ h2 {
 
 .play-button {
     color: #aa4465;
-    font-size: 4rem;
+    font-size: 3rem;
     background-color: #ffd23f;
-    padding: 25px 30px;
+    padding: 15px 30px;
     border-radius: 10px;
     box-shadow: 5px 5px #343434;
     text-decoration: none;
@@ -81,16 +87,25 @@ h2 {
 
 .play-button:hover {
     color: #aa4465;
-    font-size: 4rem;
+    font-size: 3rem;
     background-color: #ffd23f;
-    padding: 25px 30px;
+    padding: 15px 30px;
     border-radius: 10px;
     text-decoration: none;
     box-shadow: 7px 7px #343434;
     transform: scale(1.1);
 }
 
-
+.play-button:active {
+    box-shadow: 2px 2px #343434;
+    transform: scale(0.90);
+    color: #aa4465;
+    font-size: 3rem;
+    background-color: #ffd23f;
+    padding: 15px 30px;
+    border-radius: 10px;
+    text-decoration: none;
+}
 .menu {
     display: flex;
     justify-content:space-evenly;
