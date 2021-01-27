@@ -46,8 +46,9 @@ if (ArrayToCheckIfCardsMatch.length ===2){
         ArrayToCheckIfCardsMatch[0].parentNode.classList.add("pair-matched")
         ArrayToCheckIfCardsMatch[1].parentNode.classList.add("pair-matched")
 
-        calculateScore()
         appendInfoCard()
+        increaseScore()
+        
 
 
 
@@ -57,16 +58,36 @@ if (ArrayToCheckIfCardsMatch.length ===2){
        // console.log(ArrayToCheckIfCardsMatch[0].previousSibling.previousSibling)
        ArrayToCheckIfCardsMatch[0].previousSibling.previousSibling.classList.remove("clicked")
        ArrayToCheckIfCardsMatch[1].previousSibling.previousSibling.classList.remove("clicked")
-       if (score>=8) {
-           score = score-1
-           document.querySelector(".score").innerHTML = `🏆 Score: ${score}`
-       }
+       decreaseScore()
+       
     } 
     ArrayToCheckIfCardsMatch = []}}, 2500)}
 
-function calculateScore() {
+function increaseScore() {
       score = score +4
 document.querySelector(".score").innerHTML = `🏆 Score: ${score}`
+
+let matchedPairs = document.querySelectorAll(".pair-matched");
+    console.log(matchedPairs)
+
+    if ((score >= 16) || (matchedPairs.length >= 12)) {
+      alert("You win!");
+      restartGame()
+}
+}
+
+function decreaseScore() {
+
+    let matchedPairs = document.querySelectorAll(".pair-matched");
+    if ((score>=8) || (matchedPairs.length >= 4)) {
+        score = score-1
+        document.querySelector(".score").innerHTML = `🏆 Score: ${score}`
+    }
+
+    if ((score <= 0) && (matchedPairs.length >= 2)) {
+        alert("You lose!");
+        restartGame()
+  }
 }
 
 function changeNoteColorAndPlaySound(){
