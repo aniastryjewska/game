@@ -28,6 +28,21 @@
    top: 120px
 }
 
+.win-lose-panel {
+    
+    font-family: 'Zilla Slab', serif;
+    font-size: 1.5rem;
+    text-align: center;
+    height: 650px;
+    padding: 0px;
+    margin: 0px 150px;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
 
 h1 {
     font-size: 5rem;
@@ -56,6 +71,21 @@ justify-content: center;
 height: 150px;
 
 }
+
+
+.win-lose-page-title {
+    display: flex;
+align-items: center;
+justify-content: center;
+margin: 0px;
+padding: 30px 0px 0px 0px;
+height: 150px;
+font-size: 2.5rem;
+color: beige;
+font-family: 'Zilla Slab', serif;
+text-align: center;
+}
+
 
 .restart-button:hover {
     box-shadow: 7px 7px #343434;

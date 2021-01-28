@@ -1,4 +1,4 @@
-//window.onload = startGame();
+
 
 
 let noteCards = document.getElementsByClassName("note-card");
@@ -19,7 +19,6 @@ function restartGame() {
 
 for (let card of noteCards) {
     card.classList.remove("pair-matched")
-    //console.log(card.childNodes)
     card.childNodes[3].classList.remove("clicked")
     }
 let infoCards = document.querySelectorAll(".info-card");
@@ -125,9 +124,9 @@ document.querySelector(".score").innerHTML = `🏆 Score: ${score}`
 let matchedPairs = document.querySelectorAll(".pair-matched");
     console.log(matchedPairs)
 
-    if (matchedPairs.length >= 20) {
-      alert("Congratulations! 🥳 You win!");
-      restartGame()
+    if (matchedPairs.length >= 2) {
+        setTimeout(function() {window.open("./win.html")}, 2000);
+      //restartGame()
 }
 }
 
@@ -140,8 +139,8 @@ function decreaseScore() {
     }
 
     if ((score <= 0) && (matchedPairs.length >= 2)) {
-        alert("You lose 😣 Try again!");
-        restartGame()
+        setTimeout(function() {window.open("./lose.html")}, 2000);
+       // restartGame()
   }
 }
 
