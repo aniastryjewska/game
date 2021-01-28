@@ -1,6 +1,4 @@
 
-
-
 let noteCards = document.getElementsByClassName("note-card");
 let ArrayToCheckIfCardsMatch = []
 let score = 0
@@ -36,13 +34,12 @@ function startGame() {
     gameBoard.appendChild(newArrayOfShuffledCards[i]);
         }
         score = 0
-    document.querySelector(".score").innerHTML = `🏆 Score: ${score}`
+    document.querySelector(".score").innerHTML = `🏆 SCORE: ${score}`
     }
 
 function checkIfMatched() {setTimeout(function() {
 
-
-if (ArrayToCheckIfCardsMatch.length ===2){
+  if (ArrayToCheckIfCardsMatch.length ===2){
 
     console.log(ArrayToCheckIfCardsMatch[0].innerHTML)
     console.log(ArrayToCheckIfCardsMatch[1].innerHTML)
@@ -61,43 +58,42 @@ if (ArrayToCheckIfCardsMatch.length ===2){
         let card = document.getElementById("card1");
          card.classList.remove("hidden")
      } else if(ArrayToCheckIfCardsMatch[0].parentNode.id === "2") {
-        console.log("The Id is 2");
+        
         let card = document.getElementById("card2");
          card.classList.remove("hidden")
      } else if (ArrayToCheckIfCardsMatch[0].parentNode.id === "3"){
-        console.log("The Id is 3");
+        
         let card = document.getElementById("card3");
          card.classList.remove("hidden")
      } else if (ArrayToCheckIfCardsMatch[0].parentNode.id === "4"){
-        console.log("The Id is 4");
+        
         let card = document.getElementById("card4");
          card.classList.remove("hidden")
      } else if (ArrayToCheckIfCardsMatch[0].parentNode.id === "5"){
-        console.log("The Id is 5");
+        
         let card = document.getElementById("card5");
          card.classList.remove("hidden")
      } else if (ArrayToCheckIfCardsMatch[0].parentNode.id === "6"){
-        console.log("The Id is 6");
+       
         let card = document.getElementById("card6");
          card.classList.remove("hidden")
      } else if (ArrayToCheckIfCardsMatch[0].parentNode.id === "7"){
-        console.log("The Id is 7");
+        
         let card = document.getElementById("card7");
          card.classList.remove("hidden")
      } else if (ArrayToCheckIfCardsMatch[0].parentNode.id === "8"){
-        console.log("The Id is 8");
+        
         let card = document.getElementById("card8");
          card.classList.remove("hidden")
      } else if (ArrayToCheckIfCardsMatch[0].parentNode.id === "9"){
-        console.log("The Id is 9");
+        
         let card = document.getElementById("card9");
          card.classList.remove("hidden")
      } else if (ArrayToCheckIfCardsMatch[0].parentNode.id === "10"){
-        console.log("The Id is 10");
+        
         let card = document.getElementById("card10");
          card.classList.remove("hidden")
      } 
-
 
         ArrayToCheckIfCardsMatch[0].parentNode.classList.add("pair-matched");
         ArrayToCheckIfCardsMatch[1].parentNode.classList.add("pair-matched");
@@ -119,32 +115,27 @@ if (ArrayToCheckIfCardsMatch.length ===2){
 
 function increaseScore() {
       score = score +4
-document.querySelector(".score").innerHTML = `🏆 Score: ${score}`
+   
+      document.querySelector(".score").innerHTML = `🏆 SCORE: ${score}`
 
-let matchedPairs = document.querySelectorAll(".pair-matched");
-    console.log(matchedPairs)
+      let matchedPairs = document.querySelectorAll(".pair-matched");
+             console.log(matchedPairs)
 
-    if (matchedPairs.length >= 20) {
-        setTimeout(function() {window.open("./win.html")}, 2000);
-      //restartGame()
-}
-}
+     if (matchedPairs.length >= 20) {
+        setTimeout(function() {window.open("./win.html", "_self")}, 2000);
+}}
 
 function decreaseScore() {
 
     let matchedPairs = document.querySelectorAll(".pair-matched");
     if ((score>=8) || (matchedPairs.length >= 4)) {
         score = score-1
-        document.querySelector(".score").innerHTML = `🏆 Score: ${score}`
+        document.querySelector(".score").innerHTML = `🏆 SCORE: ${score}`
     }
 
     if ((score <= 0) && (matchedPairs.length >= 2)) {
-        setTimeout(function() {window.open("./lose.html")}, 2000);
-       // restartGame()
-  }
-}
-
-
+        setTimeout(function() {window.open("./lose.html", "_self")}, 2000);       
+}}
 
 function changeNoteColorAndPlaySound(){
 
@@ -159,19 +150,16 @@ function changeNoteColorAndPlaySound(){
         ArrayToCheckIfCardsMatch.push(Children[2])}
     console.log(ArrayToCheckIfCardsMatch)
   
-    
     checkIfMatched();
-   }
-     
-}
+}}
 
 window.addEventListener('load', () => {
     startGame()
      
-for (let card of noteCards) {
-    card.addEventListener('click', changeNoteColorAndPlaySound)}
+    for (let card of noteCards) {
+      card.addEventListener('click', changeNoteColorAndPlaySound)}
   
-document.querySelector(".restart-button").addEventListener('click', restartGame)
+    document.querySelector(".restart-button").addEventListener('click', restartGame)
 })
 
 
