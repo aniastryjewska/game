@@ -124,7 +124,7 @@ document.querySelector(".score").innerHTML = `🏆 Score: ${score}`
 let matchedPairs = document.querySelectorAll(".pair-matched");
     console.log(matchedPairs)
 
-    if (matchedPairs.length >= 2) {
+    if (matchedPairs.length >= 20) {
         setTimeout(function() {window.open("./win.html")}, 2000);
       //restartGame()
 }
