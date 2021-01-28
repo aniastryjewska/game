@@ -41,8 +41,17 @@ function startGame() {
     }
 
 function checkIfMatched() {setTimeout(function() {
+
+
 if (ArrayToCheckIfCardsMatch.length ===2){
-    if ((ArrayToCheckIfCardsMatch[0].innerHTML === ArrayToCheckIfCardsMatch[1].innerHTML) &&(ArrayToCheckIfCardsMatch[0].id !== ArrayToCheckIfCardsMatch[1].id)) {
+
+    console.log(ArrayToCheckIfCardsMatch[0].innerHTML)
+    console.log(ArrayToCheckIfCardsMatch[1].innerHTML)
+    console.log(ArrayToCheckIfCardsMatch[0].id)
+    console.log(ArrayToCheckIfCardsMatch[1].id)
+    
+    if ((ArrayToCheckIfCardsMatch[0].innerHTML === ArrayToCheckIfCardsMatch[1].innerHTML) && (ArrayToCheckIfCardsMatch[0].id !== ArrayToCheckIfCardsMatch[1].id)) {
+        
         console.log("They match!!")
        
        let infoCards = document.querySelectorAll(".info-card");
@@ -116,7 +125,7 @@ document.querySelector(".score").innerHTML = `🏆 Score: ${score}`
 let matchedPairs = document.querySelectorAll(".pair-matched");
     console.log(matchedPairs)
 
-    if ((score >= 16) || (matchedPairs.length >= 12)) {
+    if (matchedPairs.length >= 20) {
       alert("Congratulations! 🥳 You win!");
       restartGame()
 }
@@ -150,6 +159,8 @@ function changeNoteColorAndPlaySound(){
     if (ArrayToCheckIfCardsMatch.length <2) {
         ArrayToCheckIfCardsMatch.push(Children[2])}
     console.log(ArrayToCheckIfCardsMatch)
+  
+    
     checkIfMatched();
    }
      
